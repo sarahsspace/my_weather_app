@@ -33,8 +33,28 @@ class _WeatherPageState extends State<WeatherPage> {
     }
 
   }
+  // init state for app startup
+  @override
+  void initState() {
+    super.initState();
+    _fetchWeather();
+  }
+
+  // build UI for page
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: 
+      Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            //city name and temp 
+            Text(_weather?.cityName ?? "Loading city..."), 
+            Text('${_weather?.temperature.round()} °C'),
+        ],
+        ),
+      ),
+    );
   }
 }

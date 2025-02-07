@@ -1,4 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- these two lines are Android permissions that allow the app to access the device’s location.-->
     <application
         android:label="my_weather_app"
         android:name="${applicationName}"
